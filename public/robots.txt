@@ -1,0 +1,12 @@
+# Allow all bots to crawl all pages
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Sitemap location
+Sitemap: https://shubhsomani.tech/sitemap.xml
