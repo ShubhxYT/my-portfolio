@@ -6,7 +6,7 @@ An interactive and visually stunning portfolio website built with cutting-edge w
 
 ## 🌐 Live Site
 
-**Visit my portfolio:** [portfolio.shubhtestingthings.uk](https://portfolio.shubhtestingthings.uk)
+**Visit my portfolio:** [shubhsomani.tech](https://shubhsomani.tech)
 
 *Self-hosted on a home browser with reverse proxy for public access*
 
