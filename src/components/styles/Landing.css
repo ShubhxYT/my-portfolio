@@ -395,10 +395,6 @@ h2.landing-info-h2 {
     pointer-events: none;
   }
 
-  .character-model canvas {
-    pointer-events: none;
-  }
-
   .character-model::after,
   .character-model::before {
     display: none;

@@ -1,17 +1,7 @@
 import { PropsWithChildren } from "react";
-import { smoother } from "./Navbar";
 import "./styles/Landing.css";
 
-const Landing = ({ children }: PropsWithChildren) => {
-  const handleScroll = (target: string) => {
-    if (smoother) {
-      smoother.scrollTo(target, true, "top top");
-    } else {
-      document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  return (
+const Landing = ({ children }: PropsWithChildren) => {  return (
     <>
       <div className="landing-section" id="landingDiv">
         <div className="landing-container">
@@ -36,22 +26,6 @@ const Landing = ({ children }: PropsWithChildren) => {
             <p className="landing-subtext">
               RAG pipelines · Computer Vision · Self-hosted Infrastructure
             </p>
-            <div className="landing-cta">
-              <button
-                className="cta-primary"
-                onClick={() => handleScroll("#work")}
-                data-cursor="disable"
-              >
-                View Projects
-              </button>
-              <button
-                className="cta-secondary"
-                onClick={() => handleScroll("#contact")}
-                data-cursor="disable"
-              >
-                Contact Me
-              </button>
-            </div>
           </div>
         </div>
         {children}

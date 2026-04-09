@@ -75,18 +75,6 @@ export function initialFX() {
   );
 
   gsap.fromTo(
-    ".landing-cta",
-    { opacity: 0, y: 20 },
-    {
-      opacity: 1,
-      duration: 1,
-      ease: "power3.inOut",
-      y: 0,
-      delay: 1.2,
-    }
-  );
-
-  gsap.fromTo(
     [".header", ".icons-section", ".nav-fade"],
     { opacity: 0 },
     {
