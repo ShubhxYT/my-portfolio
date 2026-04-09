@@ -46,9 +46,8 @@ export function setSplineTimeline() {
     tl2
       .to(".about-section", { y: "30%", duration: 6 }, 0)
       .to(".about-section", { opacity: 0, delay: 3, duration: 2 }, 0)
-      .fromTo(
+      .to(
         ".character-model",
-        { x: "0%" },
         { x: "-12%", delay: 2, duration: 5 },
         0
       )
