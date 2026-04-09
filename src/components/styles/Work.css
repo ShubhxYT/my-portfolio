@@ -30,19 +30,21 @@
 .carousel-track-container {
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
   border-top: 1px solid #363636;
   border-bottom: 1px solid #363636;
 }
 
 .carousel-track {
   display: flex;
+  width: 100%;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
 .carousel-slide {
-  min-width: 100%;
-  flex-shrink: 0;
+  flex: 0 0 100%;
+  width: 100%;
   box-sizing: border-box;
   padding: 50px 0;
 }
@@ -52,10 +54,13 @@
   align-items: center;
   gap: 60px;
   width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .carousel-info {
   flex: 1;
+  min-width: 0;
   display: flex;
   gap: 30px;
   align-items: flex-start;
@@ -107,8 +112,135 @@
   font-size: 15px;
 }
 
+.carousel-summary {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Details Toggle ── */
+.details-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 16px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  background: transparent;
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.details-toggle:hover {
+  border-color: var(--accentColor);
+  background: rgba(94, 234, 212, 0.08);
+}
+
+.details-toggle svg {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.details-toggle-active svg {
+  transform: rotate(180deg);
+}
+
+/* ── Detail Panel ── */
+.carousel-detail-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-detail-panel.panel-open {
+  max-height: 600px;
+}
+
+.detail-panel-inner {
+  padding: 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accentColor);
+}
+
+.detail-block p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.detail-block ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  list-style: none;
+}
+
+.detail-block ul li {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  position: relative;
+  padding-left: 4px;
+}
+
+.detail-block ul li::before {
+  content: "›";
+  position: absolute;
+  left: -14px;
+  color: var(--accentColor);
+  font-weight: 600;
+}
+
+.detail-github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+  color: var(--accentColor);
+  border: 1px solid var(--accentColor);
+  border-radius: 6px;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 4px;
+}
+
+.detail-github-btn:hover {
+  background: var(--accentColor);
+  color: var(--backgroundColor);
+}
+
 .carousel-image-wrapper {
   flex: 1;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,8 +361,9 @@
 
 .work-image img {
   max-width: 100%;
-  max-height: 400px;
+  max-height: clamp(200px, 35vh, 400px);
   border-radius: 8px;
+  display: block;
 }
 
 /* ── Responsive ── */

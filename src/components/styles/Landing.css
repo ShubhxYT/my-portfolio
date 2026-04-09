@@ -206,7 +206,7 @@
 }
 
 .landing-info h3 {
-  font-size: 22px;
+  font-size: 16px;
   letter-spacing: 2px;
   font-weight: 300;
   color: var(--accentColor);
@@ -262,6 +262,60 @@ h2.landing-info-h2 {
   left: 0;
 }
 
+.landing-subtext {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 12px 0 0;
+  text-transform: none;
+  opacity: 0;
+}
+
+.landing-cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  z-index: 10;
+  position: relative;
+  opacity: 0;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 7px 16px;
+  font-size: 11px;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.cta-primary {
+  background-color: var(--accentColor);
+  color: var(--backgroundColor);
+  border: 1.5px solid var(--accentColor);
+}
+
+.cta-primary:hover {
+  background-color: transparent;
+  color: var(--accentColor);
+}
+
+.cta-secondary {
+  background-color: transparent;
+  color: var(--accentColor);
+  border: 1.5px solid var(--accentColor);
+}
+
+.cta-secondary:hover {
+  background-color: var(--accentColor);
+  color: var(--backgroundColor);
+}
+
 @media screen and (min-width: 500px) {
   .landing-circle2 {
     display: block;
@@ -271,8 +325,12 @@ h2.landing-info-h2 {
     z-index: 0;
   }
 
+  .landing-subtext {
+    font-size: 13px;
+  }
+
   .landing-info h3 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .landing-intro h2 {
@@ -309,7 +367,7 @@ h2.landing-info-h2 {
   }
 
   .landing-info h3 {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   .landing-info h2 {
@@ -320,6 +378,12 @@ h2.landing-info-h2 {
   h2.landing-info-h2 {
     font-size: 55px;
   }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -328,6 +392,11 @@ h2.landing-info-h2 {
     bottom: 0;
     z-index: 11;
     position: fixed;
+    pointer-events: none;
+  }
+
+  .character-model canvas {
+    pointer-events: none;
   }
 
   .character-model::after,
@@ -350,6 +419,16 @@ h2.landing-info-h2 {
     transform: translate(0%, -50%);
     right: auto;
     left: 66%;
+  }
+
+  .landing-subtext {
+    font-size: 15px;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 12px 28px;
+    font-size: 15px;
   }
 }
 
@@ -383,7 +462,7 @@ h2.landing-info-h2 {
   }
 
   .landing-info h3 {
-    font-size: 35px;
+    font-size: 25px;
   }
 
   .landing-info h2 {
@@ -393,5 +472,15 @@ h2.landing-info-h2 {
 
   h2.landing-info-h2 {
     font-size: 75px;
+  }
+
+  .landing-subtext {
+    font-size: 17px;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 14px 32px;
+    font-size: 16px;
   }
 }

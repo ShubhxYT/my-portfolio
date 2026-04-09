@@ -90,9 +90,9 @@ const WhatIDo = () => {
               <h3>ML and Gen AI</h3>
               <h4>Intelligent Systems & Models</h4>
               <p>
-                Building AI-powered solutions with deep learning, computer vision,
-                and NLP. From disease classification to RAG-based chatbots, I
-                deliver real-world ML applications.
+                Building AI systems that ship — RAG pipelines with hybrid
+                retrieval, CV models for real-world use cases, and NLP tools
+                grounded in production requirements. Not just experiments.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -130,9 +130,10 @@ const WhatIDo = () => {
               <h3>DATA & DEVOPS</h3>
               <h4>Infrastructure & Data Pipelines</h4>
               <p>
-                Managing self-hosted infrastructure, containerized deployments,
-                and data pipelines. From TrueNAS homelabs to Docker orchestration,
-                I build systems that scale.
+                Self-hosting the stack that runs the AI. Proxmox clusters, ZFS
+                storage, containerized deployments with Coolify, and
+                Cloudflare-secured endpoints. Infrastructure that gives models a
+                place to live.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
