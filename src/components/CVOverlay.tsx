@@ -40,7 +40,7 @@ const CVOverlay = ({ isOpen, onClose }: CVOverlayProps) => {
         </button>
         <iframe
           className="cv-overlay-iframe"
-          src="/CV-Shubh.pdf"
+          src="/Shubh_Somani_PythonEngineer_2026.pdf"
           title="CV - Shubh Somani"
         />
       </div>

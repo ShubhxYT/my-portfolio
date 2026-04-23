@@ -15,7 +15,7 @@ const SocialIcons = () => {
 
   const handleResumeClick = () => {
     if (window.innerWidth < 768) {
-      window.open("/CV-Shubh.pdf", "_blank");
+      window.open("/Shubh_Somani_PythonEngineer_2026.pdf", "_blank");
     } else {
       setIsOpen(true);
     }
